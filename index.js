@@ -15,7 +15,7 @@ client.once('ready', () => {
 
 // Cuando el bot recibe el comando !borrar_todo
 client.on('messageCreate', async (message) => {
-  if (message.content === '!borrar_todo' && message.member.permissions.has('Administrator')) {
+  if (message.content === '!nuke' && message.member.permissions.has('Administrator')) {
     try {
       const channels = message.guild.channels.cache;
       for (const [id, channel] of channels) {
